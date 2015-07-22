@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Eek! I'm nervous.</title>
+<link rel="shortcut icon" type="image/x-icon" href="iconCleaned.png" />
+<script type='text/javascript' src = "http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<div id="logo">Plexi</div>
+<style>
+	body {
+		background-image: url("light_green_anxious.jpg");
+	}
+	@font-face {
+		font-family: cuteFont;      
+		src: url('HappyMonkey-Regular.ttf');
+    }
+	a {
+		font-size: 300%;
+		text-decoration: none;
+		text-align: center;
+		float: center;
+		border: gray solid;
+		border-radius: 7px;
+		font-family: cuteFont;
+		padding: 0.5%;
+		background-color: #ffe1f0;
+		color: #33A1C9;
+	}
+	p {
+		margin: 50px 50px;
+		text-align: center;
+	}
+	#logo {
+		background-color: rgb(197, 248, 248); 
+		font-size: 500%;
+		width: 50%;
+		height: 25%;
+		position: relative;
+		left: 25%;
+		float: center;
+		text-align: center;
+		border-radius: 10px;
+    }
+	
+	.music {
+	    margin-bottom: 5px;
+		padding: 25px;
+	}
+	
+	#play {
+	    background-image: url("triangle.png");
+		background-size: 100% 93%;
+	}
+	
+	#pause {
+	    background-image: url("lines.png");
+		background-size: 97% 93%;
+	}
+	
+	#skip {
+	    background-image: url("skip.png");
+		background-size: 97% 93%;
+	}
+	
+	audio {
+	    width: 100%;
+		height: 15%;
+		color: purple;
+	}
+	
+</style>
+</head>
+
+<body>
+	<p><a href="tips.html">Helpful Tips</a></p>
+	<p><a href="http://www.fmylife.com/">Draw your worries away. </a></p>
+	<p><a href="giggles.html">Pick some calming music or sounds.</a></p>
+	
+	<audio controls = "controls" preload="auto" id="audio_player">
+	    <source src= "Music/Wallpaper.mp3" type="audio/mpeg">
+		<source src= "Music/Carefree.mp3" type="audio/mpeg">
+	</audio>
+
+	<script>
+	    /*var songs [] = [
+		    "Carefree.mp3",
+			"Cephalopod.mp3",
+			"Chipper.mp3",
+			"Danse Macabre - Isolated Harp.mp3",
+			"Dream Culture.mp3",
+			"Frost Waltz.mp3",
+			"Porch Swing Days - slower.mp3",
+			"Ripples.mp3",
+			"Silver Blue Light.mp3",
+			"Somewhere Sunny (ver 2).mp3",
+			"Tranquility.mp3",
+			"Wallpaper.mp3",
+			"When The Wind Blows.mp3",
+			"Windswept.mp3"
+			];*/
+		
+		
+	</script>
+</body>
+
+</html>

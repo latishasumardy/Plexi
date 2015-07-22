@@ -1,0 +1,9 @@
+{
+  "firebase": "plexi",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
