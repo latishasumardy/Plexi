@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Funny Pictures</title>
+		<script src="jquery.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+		<style>
+			body {
+				background-image: url("pale_yellow_depressed_background.gif");
+			}
+			.icon {
+				background-image: url("bigIcon.png");
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border: rgb(142, 189, 189) 1px solid;
+				float: left;
+				position: fixed;
+				margin-top: -3px;
+				border-radius: 10px;
+				z-index: 3;			
+			}
+			#bannerText {
+				font-family: cuteFont;
+				font-size: 160%;
+				color: rgb(182, 229, 229);
+				z-index: 4;
+				position: absolute;
+				margin-left: 43%;
+				margin-top: .5%;
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 8%;
+				width: 100%;
+				position: fixed;
+				z-index: 2;
+				margin-top: -20px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			#logo {
+				background-color: rgb(182, 229, 229); 
+				margin-top: 100px;
+				background-size: 100% 100%;
+				font-size: 500%;
+				width: auto;
+				height: auto;
+				position: relative;
+				left: 10%;
+				float: center;
+				text-align: center;
+				border: rgb(142, 189, 189) solid 4px;
+				border-radius: 10px;
+			}
+			#pic {
+				border-radius: 5px;
+				height: 600px;
+				width: 400px;
+				z-index: -1;
+				float: center;
+				position: relative;
+				margin-top: 10%;
+				margin-left: 35%;
+			}
+			.arrow {
+				border-radius: 5px;
+				width: 5%;
+				height: 40px;
+				position: absolute;
+				margin-top: 22%;
+				z-index: 1;
+			}
+			#left {
+				margin-top: -20%;
+				background-image: url("leftArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 23%;
+			}
+			#right {
+				margin-top: -20%;
+				background-image: url("rightArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 70%;
+			}
+			.account {
+				float: right;
+				margin-right: 1%;
+				margin: 5px 5px 5px 5px;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+				position: relative;
+				margin-top: 1.7%;
+				z-index: 3;
+			}
+			.account:hover {
+				border: white inset;
+			}
+	</head>
+	<body>
+		</style>
+		<a href="plexi.html">
+			<div class="icon"></div>
+		</a>
+		<p id="bannerText">Funny Pictures</p>
+		<div id="banner"> 
+			<button class = "account">Sign Up</button>
+			<button class = "account">Login</button>
+		</div>		
+			<img src="shark.jpg" id="pic"></img>
+			<div class="arrow" id="left"></div>
+			<div class="arrow" id="right"></div>
+		<script>
+			var sNum = 0;
+            var slideNames = ["shark.jpg", "situationQuote.jpeg", "mouse.jpeg", "heartQuote.jpeg", "horse.jpeg", "repeatQuote.jpeg", "giraffe.jpeg", "fighterQuote.jpeg", "sign.jpeg", "chanceQuote.jpeg", "dinos.jpeg", "grassQuote.jpeg"];
+			$(document).ready();
+			$( "#right" ).click(function() {
+				if(sNum == 0 || sNum < slideNames.length){
+                    sNum++;
+                }
+				else if (sNum == slideNames.length) {
+					sNum = 0;
+				}
+				$('#pic').attr('src', slideNames[sNum]);
+			});
+			$( "#left" ).click(function() {
+				if(sNum == slideNames.length - 1 || sNum > 0){
+                    sNum--;
+                }
+				else if (sNum == 0) {
+					sNum = slideNames.length - 1;
+				}
+				$('#pic').attr('src', slideNames[sNum]);
+			});
+        </script>
+	</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anger Help</title>
+		<script src="jquery.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+		<style>
+			.icon {
+				background-image: url("bigIcon.png");
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border: rgb(142, 189, 189) 1px solid;
+				float: left;
+				position: absolute;
+				margin-top: 7px;
+				border-radius: 10px;
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 8%;
+				width: 100%;
+				position: fixed;
+				z-index: -1;
+				margin-top: -12px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			body {
+				background-image: url("light_blue_angry.jpg");
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			.options {
+				text-decoration: none;
+				text-align: center;
+				border: #FF79BC solid;
+				border-radius: 7px;
+				font-family: cuteFont;
+				padding: 0.5%;
+				background-color:#FFB4D9;
+				color: #D1EEEE;
+				position: relative;
+				width: 15%;
+				height: 150px;
+				margin-top: 10%;
+			}
+			.optionsText {
+				margin-top: 20%;
+				text-align: center;
+			}
+			#tips {
+				float: left;
+				margin-left: 14%;
+			}
+			#tipsText {
+				font-size: 300%;
+				margin-left: 12%;
+				margin-top: 8%;
+			}
+			#games {
+				font-size: 140%;
+				float: left;
+				margin-left: 2%;
+			}
+			#gamesText {
+				margin-top: 6%;
+				margin-left: 12%;
+				font-size: 220%;
+				text-align: center;
+				float: center;
+			}
+			#music {
+				float: right;
+				margin-right: 14%;
+			}
+			#musicText {
+				font-size: 200%;
+				margin-top: 10%;
+				margin-left: 20%;
+			}
+			#resources {
+				float: right;
+				margin-right: 2%;			
+			}
+			#resourcesText {
+				margin-left: 6%;
+				margin-top: 13%;
+				font-size: 240%;
+				text-align: center;
+			}
+			p {
+				margin: 50px 50px;
+				text-align: center;
+				text-decoration: none;
+			}
+			a {
+				text-decoration: none;
+			}
+			#logo {
+				background-color: rgb(182, 229, 229);
+				margin-top: -10px;
+				font-size: 500%;
+				width: 40%;
+				height: 230px;
+				position: relative;
+				left: 30%;
+				float: center;
+				text-align: center;
+				border: rgb(142, 189, 189) solid 4px;
+				border-radius: 10px;
+			}
+			#logoText {
+				font-family: cuteFont;
+				margin-top: -1%;
+				color: rgb(38, 126, 181);
+				text-shadow: -1px 0 rgb(142, 189, 189), 0 1px rgb(142, 189, 189), 1px 0 rgb(142, 189, 189), 0 -1px rgb(142, 189, 189);
+				font-size: 120%;
+			}
+			.account {
+				margin-top: 1.3%;
+				float: right;
+				margin-right: 1%;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+			}
+			.account:hover {
+				border: white inset;
+			}
+		</style>
+	</head>
+
+	<body>  
+		<a href="plexi.html">
+			<div class="icon"></div>
+		</a>
+		<div id="banner"> 
+		</div>
+		<button class = "account">Sign Up</button>
+		<button class = "account">Login</button>
+		<div id="logo">
+			<p id="logoText">Anger Help</p>
+		</div>
+		<a href="tips.html">
+			<div class="options" id="tips">
+				<p class="optionsText" id="tipsText">Helpful tips</p>
+			</div>
+		</a>
+		<a href=""> 
+			<div class="options" id="games">
+				<p class="optionsText" id="gamesText">Vent games!</p>
+			</div>
+		</a>
+		<a href="">
+			<div class="options" id="music">
+				<p class="optionsText" id="musicText">Pumped up music</p>
+			</div>
+		</a>
+		<a href="calmingPics.html">
+			<div class="options" id="resources">
+				<p class="optionsText" id="resourcesText">Other resources</p>
+			</div>
+		</a>
+	</body>
+
+</html>
