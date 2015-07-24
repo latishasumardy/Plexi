@@ -1,107 +1,167 @@
 <!DOCTYPE html>
-
 <html>
+	<head>
+		<title>Anxiety Help</title>
+		<script src="jquery.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+		<style>
+			.icon {
+				background-image: url("bigIcon.png");
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border: rgb(142, 189, 189) 1px solid;
+				float: left;
+				position: absolute;
+				margin-top: 7px;
+				border-radius: 10px;
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 8%;
+				width: 100%;
+				position: fixed;
+				z-index: -1;
+				margin-top: -12px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			body {
+				background-image: url("light_green_anxious.jpg");
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			.options {
+				text-decoration: none;
+				text-align: center;
+				border: #FF79BC solid;
+				border-radius: 7px;
+				font-family: cuteFont;
+				padding: 0.5%;
+				background-color: #ffe1f0;
+				color: #33A1C9;
+				position: relative;
+				width: 15%;
+				height: 150px;
+				margin-top: 10%;
+			}
+			.optionsText {
+				margin-top: 20%;
+				text-align: center;
+			}
+			#tips {
+				float: left;
+				margin-left: 14%;
+			}
+			#tipsText {
+				font-size: 270%;
+				margin-top: 12%;
+				margin-left: 16%;
+			}
+			#draw {
+				float: left;
+				margin-left: 2%;
+			}
+			#drawText {
+				margin-top: 8%;
+				margin-left: 15%;
+				font-size: 200%;
+			}
+			#music {
+				float: right;
+				margin-right: 14%;
+			}
+			#musicText {
+				font-size: 200%;
+				margin-top: 0%;
+			}
+			#pics {
+				float: right;
+				margin-right: 2%;			
+			}
+			#picsText {
+				margin-left: 14%;
+				margin-top: 14%;
+				font-size: 240%;
+				text-align: center;
+			}
+			p {
+				margin: 50px 50px;
+				text-align: center;
+				text-decoration: none;
+			}
+			a {
+				text-decoration: none;
+			}
+			#logo {
+				background-color: rgb(182, 229, 229);
+				margin-top: -10px;
+				font-size: 500%;
+				width: 40%;
+				height: 230px;
+				position: relative;
+				left: 30%;
+				float: center;
+				text-align: center;
+				border: rgb(142, 189, 189) solid 4px;
+				border-radius: 10px;
+			}
+			#logoText {
+				font-family: cuteFont;
+				margin-top: -1%;
+				color: rgb(38, 126, 181);
+				text-shadow: -1px 0 rgb(142, 189, 189), 0 1px rgb(142, 189, 189), 1px 0 rgb(142, 189, 189), 0 -1px rgb(142, 189, 189);
+				font-size: 120%;
+			}
+			.account {
+				margin-top: 1.3%;
+				float: right;
+				margin-right: 1%;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+			}
+			.account:hover {
+				border: white inset;
+			}
+		</style>
+	</head>
 
-<head>
-<title>Eek! I'm nervous.</title>
-<link rel="shortcut icon" type="image/x-icon" href="iconCleaned.png" />
-<script type='text/javascript' src = "http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<div id="logo">Plexi</div>
-<style>
-	body {
-		background-image: url("light_green_anxious.jpg");
-	}
-	@font-face {
-		font-family: cuteFont;      
-		src: url('HappyMonkey-Regular.ttf');
-    }
-	a {
-		font-size: 300%;
-		text-decoration: none;
-		text-align: center;
-		float: center;
-		border: gray solid;
-		border-radius: 7px;
-		font-family: cuteFont;
-		padding: 0.5%;
-		background-color: #ffe1f0;
-		color: #33A1C9;
-	}
-	p {
-		margin: 50px 50px;
-		text-align: center;
-	}
-	#logo {
-		background-color: rgb(197, 248, 248); 
-		font-size: 500%;
-		width: 50%;
-		height: 25%;
-		position: relative;
-		left: 25%;
-		float: center;
-		text-align: center;
-		border-radius: 10px;
-    }
-	
-	.music {
-	    margin-bottom: 5px;
-		padding: 25px;
-	}
-	
-	#play {
-	    background-image: url("triangle.png");
-		background-size: 100% 93%;
-	}
-	
-	#pause {
-	    background-image: url("lines.png");
-		background-size: 97% 93%;
-	}
-	
-	#skip {
-	    background-image: url("skip.png");
-		background-size: 97% 93%;
-	}
-	
-	audio {
-	    width: 100%;
-		height: 15%;
-		color: purple;
-	}
-	
-</style>
-</head>
-
-<body>
-	<p><a href="tips.html">Helpful Tips</a></p>
-	<p><a href="embedTest.html">Draw your worries away. </a></p>
-	<p><a href="giggles.html">Pick some calming music or sounds.</a></p>
-	
-	<audio controls = "controls" preload="auto" id="audio_player">
-	    <source src= "Music/Wallpaper.mp3" type="audio/mpeg">
-		<source src= "Music/Carefree.mp3" type="audio/mpeg">
-	</audio>
-
-	<script>
-	    /*var songs [] = [
-		    "Carefree.mp3",
-			"Cephalopod.mp3",
-			"Chipper.mp3",
-			"Danse Macabre - Isolated Harp.mp3",
-			"Dream Culture.mp3",
-			"Frost Waltz.mp3",
-			"Porch Swing Days - slower.mp3",
-			"Ripples.mp3",
-			"Silver Blue Light.mp3",
-			"Somewhere Sunny (ver 2).mp3",
-			"Tranquility.mp3",
-			"Wallpaper.mp3",
-			"When The Wind Blows.mp3",
-			"Windswept.mp3"
-			];*/
-		
-		
-	</script>
-</body>
+	<body>  
+		<a href="index.html">
+			<div class="icon"></div>
+		</a>
+		<div id="banner"> 
+		</div>
+		<button class = "account">Sign Up</button>
+		<button class = "account">Login</button>
+		<div id="logo">
+			<p id="logoText">Anxiety Help</p>
+		</div>
+		<a href="">
+			<div class="options" id="tips">
+				<p class="optionsText" id="tipsText">Helpful Tips</p>
+			</div>
+		</a>
+		<a href="anxietygames.html"> 
+			<div class="options" id="draw">
+				<p class="optionsText" id="drawText">Games & Exercises</p>
+			</div>
+		</a>
+		<a href="">
+			<div class="options" id="music">
+				<p class="optionsText" id="musicText">Calming Music & Sounds</p>
+			</div>
+		</a>
+		<a href="calmingPics.html">
+			<div class="options" id="pics">
+				<p class="optionsText" id="picsText">Cute Pictures</p>
+			</div>
+		</a>
+	</body>
 
 </html>

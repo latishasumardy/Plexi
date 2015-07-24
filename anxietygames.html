@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anxiety Games & Exercises</title>
+		<script src="jquery.js"></script>
+		<script src="processing-1.4.1.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+		<script type="text/processing" data-processing-target="mycanvas">
+			void setup() {
+				noStroke();   
+				background(182, 229, 229);
+				size(500, 500);
+				textFont(createFont("HappyMonkey-Regular.ttf",32))
+			}
+			var red = 255;
+			var green = 255;
+			var blue = 255;
+			
+			var rectY = 460;
+			var width = 75;
+			var height = 40;
+			
+			var rectSeaX = 0;
+			var rectFlowerX = 87;
+			var rectAutumnX = 175;
+			var rectClearX = 425;
+			var rectSizeX = 340;
+			
+			var radius = 20;
+			void draw() {
+				textSize(30);
+				fill(142, 189, 189);
+				text("Click and drag to draw", 100, 30);
+				text("Colors:", 0, 450);
+				
+				textSize(20);
+				fill(142, 189, 189);
+				rect(rectSeaX, rectY, width, height);
+				fill(182, 229, 229);
+				text("Sea", 17, 490);
+				
+				fill(142, 189, 189);
+				rect(rectFlowerX, rectY, width, height);
+				fill(182, 229, 229);
+				text("Flower", 93, 490);
+				
+				textSize(18);
+				fill(142, 189, 189);
+				rect(rectAutumnX, rectY, width, height);
+				fill(182, 229, 229);
+				text("Autumn", 178, 490);
+				
+				textSize(20);
+				fill(142, 189, 189);
+				rect(rectClearX, rectY, width, height);
+				fill(182, 229, 229);
+				text("Clear", 439, 490);
+				
+				textSize(20);
+				fill(142, 189, 189);
+				rect(rectSizeX, rectY, width, height);
+				fill(182, 229, 229);
+				text("Size", 360, 490);
+				noFill();
+			}
+			var inc = 30;
+			void mousePressed() {
+				if ((mouseX <= rectSeaX + width && mouseX >= rectSeaX) && (mouseY <= rectY + height && mouseY >= rectY)) {
+					changeColor(50, 255, 255);
+				}
+				else if ((mouseX <= rectFlowerX + width && mouseX >= rectFlowerX) && (mouseY <= rectY + height && mouseY >= rectY)) {
+					changeColor(255, 50, 255);
+				}
+				else if ((mouseX <= rectAutumnX + width && mouseX >= rectAutumnX) && (mouseY <= rectY + height && mouseY >= rectY)) {
+					changeColor(255, 255, 50);
+				}
+				else if ((mouseX <= rectClearX + width && mouseX >= rectClearX) && (mouseY <= rectY + height && mouseY >= rectY)) {
+					background(182, 229, 229);
+				}
+				else if ((mouseX <= rectSizeX + width && mouseX >= rectSizeX) && (mouseY <= rectY + height && mouseY >= rectY)) {
+					if (inc <= 100) {
+						inc += 10;
+					}
+					else {
+						inc = 20;
+					}
+					changeSize(inc);
+				}
+			}
+			void changeColor(var redC, var greenC, var blueC) {
+				red = redC;
+				green = greenC;
+				blue = blueC;
+			}
+			void changeSize(var rad) {
+				radius = rad;
+			}
+			
+			void mouseDragged() {
+				var x = 50;
+				ellipse(mouseX, mouseY, radius, radius);
+				fill(Math.random() * red, Math.random() * green, Math.random() * blue);
+				x = x - 0.5;
+			};
+		</script>
+		<style>
+			#mycanvas {
+				position: absolute;
+				float: center;
+				margin-left: 33%;
+				margin-top: 10%;
+				border-radius: 10px;
+				border: rgb(142, 189, 189) solid;
+			}
+			.icon {
+				background-image: url("bigIcon.png");
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border: rgb(142, 189, 189) 1px solid;
+				float: left;
+				position: fixed;
+				margin-top: -3px;
+				border-radius: 10px;
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 7%;
+				width: 100%;
+				position: fixed;
+				z-index: -1;
+				margin-top: -12px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			body {
+				background-image: url("light_green_anxious.jpg");
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			p {
+				margin: 50px 50px;
+				text-align: center;
+				text-decoration: none;
+			}
+			a {
+				text-decoration: none;
+			}
+			.account {
+				margin-top: .6%;
+				float: right;
+				margin-right: 1%;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+			}
+			.account:hover {
+				border: white inset;
+			}
+			#bannerText {
+				font-family: cuteFont;
+				font-size: 160%;
+				color: rgb(182, 229, 229);
+				z-index: 4;
+				position: fixed;
+				margin-left: 43%;
+				margin-top: .5%;
+			}
+		</style>
+	</head>
+
+	<body>  
+		<a href="index.html">
+			<div class="icon"></div>
+		</a>
+		<p id="bannerText">Games & Exercises</p>
+		<div id="banner"> 
+		</div>
+		<button class = "account">Sign Up</button>
+		<button class = "account">Login</button>
+		<canvas id="mycanvas">
+		</canvas>
+	</body>
+
+</html>

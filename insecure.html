@@ -3,52 +3,169 @@
 <html>
 
 <head>
-<title>I can't do anything right.</title>
-<link rel="shortcut icon" type="image/x-icon" href="icon.png" />
-<div id="logo">Plexi</div>
-<style>
-	body {
-		background-image: url("gold_background.jpg");
-	}
-	@font-face {
-		font-family: cuteFont;      
-		src: url('HappyMonkey-Regular.ttf');
-    }
-	a {
-		font-size: 300%;
-		text-decoration: none;
-		text-align: center;
-		float: center;
-		border: gray solid;
-		border-radius: 7px;
-		font-family: cuteFont;
-		padding: 0.5%;
-		background-color:#EEE0E5;
-		color: #872657;
-	}
-	p {
-		margin: 50px 50px;
-		text-align: center
-	}
-	#logo {
-		background-color: rgb(197, 248, 248); 
-		font-size: 500%;
-		width: 50%;
-		height: 25%;
-		position: relative;
-		left: 25%;
-		float: center;
-		text-align: center;
-		border-radius: 10px;
-    }
-	
-</style>
-</head>
-
-<body>
-	<p><a href="tips.html">Helpful Tips</a></p>
-	<p><a href="giggles.html">Motivation Quote of the Day</a></p>
-	<p><a href="http://www.fmylife.com/">Success Stories From People Like <i>You</i></a></p>
-</body>
-
+	<title>Insecurity Help</title>
+	<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+	<style>
+		body {
+			background-image: url("gold_background.jpg");
+		}
+		@font-face {
+			font-family: cuteFont;      
+			src: url('HappyMonkey-Regular.ttf');
+		}
+		.icon {
+			background-image: url("bigIcon.png");
+			background-size: 100% 100%;
+			width: 50px;
+			height: 50px;
+			border: rgb(142, 189, 189) 1px solid;
+			float: left;
+			position: absolute;
+			margin-top: 7px;
+			border-radius: 10px;
+			}
+		#banner {
+			background-color: rgb(142, 189, 189);
+			height: 8%;
+			width: 100%;
+			position: fixed;
+			z-index: -1;
+			margin-top: -12px;
+			margin-left: -12px;
+			border: rgb(142, 189, 189) solid;
+		}
+		.options {
+			text-decoration: none;
+			text-align: center;
+			border: #872657 solid;
+			border-radius: 7px;
+			font-family: cuteFont;
+			padding: 0.5%;
+			background-color:#EEE0E5;
+			color: #872657;
+			position: relative;
+			width: 15%;
+			height: 150px;
+			margin-top: 10%;
+		}
+		.optionsText {
+			margin-top: 20%;
+			text-align: center;
+		}
+		#tips {
+			font-size: 200%;
+			float: left;
+			margin-left: 14%;
+		}
+		#tipsText {
+			margin-top: 10%;
+			font-size: 140%;
+			margin-left: 15%;
+			text-align: center;
+		}
+		#gamesText {
+			margin-top: 5%;
+			margin-left: 13%;
+			font-size: 150%;
+		}
+		#resources {
+			font-size: 140%;
+			float: left;
+			margin-left: 2%;
+		}
+		#resourceText {
+			margin-top: 11%;
+			font-size: 170%;
+			margin-left: 7%;
+			text-align: center;
+		}
+		#games {
+			font-size: 140%;
+			float: right;
+			margin-right: 14%;
+		}
+		#pics {
+			float: right;
+			margin-right: 2%;			
+		}
+		#picsText {
+			margin-left: 19%;
+			margin-top: 8%;
+			font-size: 200%;
+			text-align: center;
+		}
+		p {
+			margin: 50px 50px;
+			text-align: center;
+			text-decoration: none;
+		}
+		a {
+			text-decoration: none;
+		}
+		#logo {
+			background-color: rgb(182, 229, 229);
+			margin-top: -10px;
+			font-size: 500%;
+			width: 40%;
+			height: 230px;
+			position: relative;
+			left: 30%;
+			float: center;
+			text-align: center;
+			border: rgb(142, 189, 189) solid 4px;
+			border-radius: 10px;
+		}
+		#logoText {
+				font-family: cuteFont;
+				margin-top: 2%;
+				color: rgb(38, 126, 181);
+				text-shadow: -1px 0 rgb(142, 189, 189), 0 1px rgb(142, 189, 189), 1px 0 rgb(142, 189, 189), 0 -1px rgb(142, 189, 189);
+		}
+		.account {
+			margin-top: 1.3%;
+			float: right;
+			margin-right: 1%;
+			padding: 5px 5px 5px 5px;
+			border-radius: 5px;
+			background-color: rgb(182, 229, 229);
+			border: white outset;
+			font-family: cuteFont;
+		}
+		.account:hover {
+			border: white inset;
+		}
+		</style>
+	</head>
+	<body>  
+		<a href="index.html">
+			<div class="icon"></div>
+		</a>
+		<div id="banner"> 
+		</div>
+			<button class = "account">Sign Up</button>
+			<button class = "account">Login</button>
+		<div id="logo">
+			<p id="logoText">Insecurity Help</p>
+		</div>
+		<a href="">
+			<div class="options" id="tips">
+				<p class="optionsText" id="tipsText">Helpful Tips</p>
+			</div>
+		</a>
+		<a href=""> 
+			<div class="options" id="resources">
+				<p class="optionsText" id="resourceText">Other Resources</p>
+			</div>
+		</a>
+		<a href="">
+			<div class="options" id="games">
+				<p class="optionsText" id="gamesText">Games & Exercises</p>
+			</div>
+		</a>
+		<a href="upliftingPics.html">
+			<div class="options" id="pics">
+				<p class="optionsText" id="picsText">Pictures and Quotes</p>
+			</div>
+		</a>
+	</body>
 </html>
