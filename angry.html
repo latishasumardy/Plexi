@@ -12,8 +12,8 @@
 				height: 50px;
 				border: rgb(142, 189, 189) 1px solid;
 				float: left;
-				position: absolute;
-				margin-top: 7px;
+				position: fixed;
+				margin-top: -3px;
 				border-radius: 10px;
 			}
 			#banner {
@@ -22,7 +22,7 @@
 				width: 100%;
 				position: fixed;
 				z-index: -1;
-				margin-top: -12px;
+				margin-top: -22px;
 				margin-left: -12px;
 				border: rgb(142, 189, 189) solid;
 			}
@@ -40,12 +40,12 @@
 				border-radius: 7px;
 				font-family: cuteFont;
 				padding: 0.5%;
-				background-color:#FFB4D9;
-				color: #D1EEEE;
+				background-color: #ffe1f0;
+				color: #33A1C9;
 				position: relative;
 				width: 15%;
 				height: 150px;
-				margin-top: 10%;
+				margin-top: 26%;
 			}
 			.optionsText {
 				margin-top: 20%;
@@ -105,7 +105,7 @@
 				font-size: 500%;
 				width: 40%;
 				height: 230px;
-				position: relative;
+				position: fixed;
 				left: 30%;
 				float: center;
 				text-align: center;
@@ -113,24 +113,31 @@
 				border-radius: 10px;
 			}
 			#logoText {
+				position: fixed;
 				font-family: cuteFont;
-				margin-top: -1%;
+				margin-top: 3.5%;
+				float: center;
+				margin-left: 3%;
 				color: rgb(38, 126, 181);
 				text-shadow: -1px 0 rgb(142, 189, 189), 0 1px rgb(142, 189, 189), 1px 0 rgb(142, 189, 189), 0 -1px rgb(142, 189, 189);
-				font-size: 120%;
+				font-size: 110%;
 			}
 			.account {
-				margin-top: 1.3%;
-				float: right;
-				margin-right: 1%;
+                margin-top: .6%;
 				padding: 5px 5px 5px 5px;
 				border-radius: 5px;
 				background-color: rgb(182, 229, 229);
 				border: white outset;
 				font-family: cuteFont;
-			}
+				position: fixed;
+				margin-left: 93%;
+				
+            }
 			.account:hover {
 				border: white inset;
+			}
+			#login {
+				margin-left: 89%;
 			}
 		</style>
 	</head>
@@ -142,7 +149,7 @@
 		<div id="banner"> 
 		</div>
 		<button class = "account">Sign Up</button>
-		<button class = "account">Login</button>
+		<button id="login" class = "account">Login</button>
 		<div id="logo">
 			<p id="logoText">Anger Help</p>
 		</div>
