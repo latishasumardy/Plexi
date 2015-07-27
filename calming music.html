@@ -2,55 +2,48 @@
 
 <html>
 
-<head>
-<title>Eek! I'm nervous.</title>
-<link rel="shortcut icon" type="image/x-icon" href="iconCleaned.png" />
-<script type='text/javascript' src = "http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<div id="logo">Plexi</div>
-<style>
-
-	
-</style>
-</head>
-
-<body>
-
-    <button class = "back"><</button>
-	<audio controls preload="auto" id="audio_player">
-	    <source class = "song" src= "Music/Wallpaper.mp3" type="audio/mpeg">
+	<head>
+		<title>Calming Music</title>
+		<link rel="shortcut icon" type="image/x-icon" href="iconCleaned.png" />
+		<script type='text/javascript' src = "http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<div id="logo">Plexi</div>
+	</head>
+	<body>
+		
+		<button class = "back"><</button>
+		<audio controls preload="auto" id="audio_player">
+			<source class = "song" src= "Music/Wallpaper.mp3" type="audio/mpeg">
 		<!--<source src= "Music/Carefree.mp3" type="audio/mpeg">-->
-	</audio>
-	<button class = "forward">></button>
+		</audio>
+		<button class = "forward">></button>
+		<script>
+			var songs = ["Music/Carefree.mp3", "Music/Cephalopod.mp3", "Music/Chipper.mp3", "Music/Danse Macabre - Isolated Harp.mp3", "Music/Dream Culture.mp3", "Music/Frost Waltz.mp3", "Music/Porch Swing Days - slower.mp3", "Music/Ripples.mp3", "Music/Silver Blue Light.mp3", "Music/Somewhere Sunny (ver 2).mp3", "Music/Tranquility.mp3", "Music/Wallpaper.mp3", "Music/When The Wind Blows.mp3", "Music/Windswept.mp3"];
+			var playlist = 0;
 
-	<script>
-	    var songs = ["Music/Carefree.mp3", "Music/Cephalopod.mp3", "Music/Chipper.mp3", "Music/Danse Macabre - Isolated Harp.mp3", "Music/Dream Culture.mp3", "Music/Frost Waltz.mp3", "Music/Porch Swing Days - slower.mp3", "Music/Ripples.mp3", "Music/Silver Blue Light.mp3", "Music/Somewhere Sunny (ver 2).mp3", "Music/Tranquility.mp3", "Music/Wallpaper.mp3", "Music/When The Wind Blows.mp3", "Music/Windswept.mp3"];
-		var playlist = 0;
-
-        $('.song').attr('src', songs[playlist]);
-		
-		var prog = $('.song').attr('progress');
-		
-		$('.back').click(function(){
-		    if(playlist > 0){
-			    alert(playlist);
-			    playlist--;
-			}
 			$('.song').attr('src', songs[playlist]);
-		});
-		
-		$('.forward').click(function(){
-		    if(playlist >= songs.length){
-			    alert(playlist);
-			    playlist = 0;
-			}
-			else{
-			    alert(playlist);
-			    playlist++;
-			}
-			$('.song').attr('src', songs[playlist]);
-		});
-		
-	</script>
-</body>
-
+			
+			var prog = $('.song').attr('progress');
+			
+			$('.back').click(function(){
+				if(playlist > 0){
+					alert(playlist);
+					playlist--;
+				}
+				$('.song').attr('src', songs[playlist]);
+			});
+			
+			$('.forward').click(function(){
+				if(playlist >= songs.length){
+					alert(playlist);
+					playlist = 0;
+				}
+				else{
+					alert(playlist);
+					playlist++;
+				}
+				$('.song').attr('src', songs[playlist]);
+			});
+			
+		</script>
+	</body>
 </html>

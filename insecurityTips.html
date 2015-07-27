@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Insecurity Tips</title>
+		<script type='text/javascript' src = "jquery.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+	</head>
+	<body>
+		<style>
+			.icon {
+				background-image: url("bigIcon.png");
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border: rgb(142, 189, 189) 1px solid;
+				float: left;
+				position: fixed;
+				margin-top: -3px;
+				border-radius: 10px;
+				z-index: 3;			
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 8%;
+				width: 100%;
+				position: fixed;
+				z-index: 2;
+				margin-top: -20px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			#bannerText {
+				font-family: cuteFont;
+				font-size: 160%;
+				color: rgb(182, 229, 229);
+				z-index: 4;
+				position: fixed;
+				margin-left: 43%;
+				margin-top: .5%;
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			#logo {
+				background-color: rgb(182, 229, 229); 
+				margin-top: 100px;
+				background-size: 100% 100%;
+				font-size: 500%;
+				width: 80%;
+				height: 630px;
+				position: relative;
+				left: 10%;
+				float: center;
+				text-align: center;
+				border: rgb(142, 189, 189) solid 4px;
+				border-radius: 10px;
+			}
+			body {
+				background-image: url("gold_background.jpg");
+			}
+			#pic {
+				border-radius: 5px;
+				height: 630px;
+				width: 80%;
+				z-index: -1;
+				float: center;
+				position: relative;
+				margin-top: 10%;
+				margin-left: 10%;
+			}
+			.arrow {
+				border-radius: 5px;
+				width: 5%;
+				height: 40px;
+				position: absolute;
+				margin-top: 22%;
+				z-index: 1;
+			}
+			#left {
+				margin-top: -22%;
+				background-image: url("leftArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 3%;
+			}
+			#right {
+				margin-top: -22%;
+				background-image: url("rightArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 91%;
+			}
+			.account {
+                margin-top: 1.8%;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+				position: fixed;
+				margin-left: 93.6%;
+				
+            }
+			.account:hover {
+				border: white inset;
+			}
+			#login {
+				margin-left: 89.6%;
+			}
+			li {
+				position: absolute;
+				font-family: cuteFont;
+				font-size: 130%;
+				color: rgb(142, 189, 189);
+				height: auto;
+				width: 80%;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
+				text-align: center;
+				float: center;
+				position: absolute;
+				margin-top: 58%;
+				left: 55%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+				list-style-type: disc;
+				display: block;
+			}
+			ul {
+				padding: 10% 10% 10% 10% 10%;
+			}
+			#subtitle {
+				font-family: cuteFont;
+				font-size: 300%;
+				color: rgb(142, 189, 189);
+				position: absolute;
+				height: auto;
+				width: auto;
+				top: 12%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+			}
+			.below {
+				text-align: left;
+				font-size: 90%;
+			}
+			#firstTip {
+				margin-top: -15%;
+				width: 30%;
+			}
+			#secondTip {
+				margin-top: 2%;
+				width: 30%;
+			}
+			#thirdTip {
+				margin-top: -96.2%;
+				margin-left: 50%;
+				width: 30%;
+			}
+			#fourthTip {
+				margin-left: 50%;
+				width: 30%;
+			}
+			#credit {
+				bottom: -50%;
+				right: 0%;
+				font-family: cuteFont;
+				font-size: 100%;
+				position: absolute;
+				color: rgb(142, 189, 189);
+			}
+			a:link {
+				color: rgb(142, 189, 189); 
+				background-color:transparent; 
+				text-decoration:none;
+			}
+			a:visited {
+				color: rgb(182, 229, 229); 
+				background-color:transparent; 
+				text-decoration:none;
+			}
+			a:hover {
+				color: rgb(182, 229, 229); 
+				background-color:transparent; 
+				text-decoration:underline;
+			}
+		</style>
+		<a href="index.html">
+			<div class="icon"></div>
+		</a>
+		<p id="bannerText">Insecurity Tips</p>
+		<div id="banner"> 
+			<button class = "account">Sign Up</button>
+			<button id="login" class = "account">Login</button>
+		</div>
+		<h2 id="subtitle">Dealing with insecurity</h2>
+		<li>
+			<ul id="firstTip"><strong>Know that your insecurity is invisible.</strong>
+				<p class="below">Let's say you walk into a party where you know practically no one and you're totally nervous. You're feeling super insecure, you start wondering why you even came, and you're confident everyone is looking at you and can see how insecure you are. False. Sure, they can see you're nervous, but that's it. No one can see your insides. Don't let something totally invisible box you in, keeping you from who you want to be. Most of us get so caught up in the fact that we assume everyone knows how we feel and can tell we're insecure, making the situation even worse. Luckily, this just isn't true. No one is judging you for being insecure because no one can tell.</p>
+			</ul>
+			<ul id="secondTip"><strong>List out all your good qualities.</strong>
+				<p class="below">Seriously. Take out a piece of paper and a pen (or your phone) and write them down. What do you like about yourself? Don't stop until you have at least five. Is it a talent? A physical attribute? A personality trait?
+				If you can't think of any (you're not alone), ask a few close friends or family members what they think your best qualities are. Besides, there's tons of research that says others know us better than we know ourselves. When you're feeling down for the count, bust out this list or remember back to its contents. Take on an attitude of gratitude and those insecurities may just start slipping away. Look online for lists of self affirmations that could also be used if one cannot come up with positive qualities.</p>
+			</ul>
+			<ul id="thirdTip"><strong>Take care of your body, your space, and your time. </strong>
+				<p class="below">In order to love ourselves, our minds have to see some proof that we do. If someone treated you terribly you wouldn't believe they loved you, and the same goes for you. Here's what to keep in mind: <strong>Take care of your body.</strong> Exercise, eat healthy, get enough sleep, and keep it at 100% as often as possible. This is the bare minimum. <strong>Take care of your space.</strong> If you live in a pile of potato chip bags, you probably aren't going to feel ready to take on the world. What's more, you need to take care of your mental space, too. Practice meditation, do yoga, or find some other way to keep your mind stress-free. <strong>Take care of your time.</strong> In other words, make time to A) relax, and B) do what you love. With these two things, happiness falls in line - a large obstacle to self-acceptance.</p>
+			</ul>
+			<ul id="fourthTip"><strong>When in doubt, fake it.</strong>
+				<p class="below"> "Fake it till you make it" isn't just some conveniently rhyming, trite piece of advice. In fact, science says it works. Even faking confidence convinces others you're more confident, competent, and can lead to more opportunities and better results. So if you need that extra dose of confidence, lean on your acting skills. Everyone will be none the wiser. Don't know where to start? Go through your body and consciously release your muscles that are holding tension. When we get nervous, we physically tense up. Letting your muscles go is a cue to your mind and those around you that you're cool as a cucumber.</p>
+			</ul>
+		</li>
+		<p id="credit">Tips from <a href="http://www.wikihow.com/Stop-Being-Insecure,-and-Just-Love-You">Wikihow.com</a></p>
+	</body>
+</html>

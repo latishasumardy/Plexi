@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Plexi</title>
+		<script type='text/javascript' src = "jquery.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+	</head>
+	<body>
+		<style>
+			.icon {
+				background-image: url("bigIcon.png");
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border: rgb(142, 189, 189) 1px solid;
+				float: left;
+				position: fixed;
+				margin-top: -3px;
+				border-radius: 10px;
+				z-index: 3;			
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 8%;
+				width: 100%;
+				position: fixed;
+				z-index: 2;
+				margin-top: -20px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			#bannerText {
+				font-family: cuteFont;
+				font-size: 160%;
+				color: rgb(182, 229, 229);
+				z-index: 4;
+				position: fixed;
+				margin-left: 43%;
+				margin-top: .5%;
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			#logo {
+				background-color: rgb(182, 229, 229); 
+				margin-top: 100px;
+				background-size: 100% 100%;
+				font-size: 500%;
+				width: 80%;
+				height: 630px;
+				position: relative;
+				left: 10%;
+				float: center;
+				text-align: center;
+				border: rgb(142, 189, 189) solid 4px;
+				border-radius: 10px;
+			}
+			body {
+				background-image: url("light_green_anxious.jpg");
+			}
+			#pic {
+				border-radius: 5px;
+				height: 630px;
+				width: 80%;
+				z-index: -1;
+				float: center;
+				position: relative;
+				margin-top: 10%;
+				margin-left: 10%;
+			}
+			.arrow {
+				border-radius: 5px;
+				width: 5%;
+				height: 40px;
+				position: absolute;
+				margin-top: 22%;
+				z-index: 1;
+			}
+			#left {
+				margin-top: -22%;
+				background-image: url("leftArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 3%;
+			}
+			#right {
+				margin-top: -22%;
+				background-image: url("rightArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 91%;
+			}
+			.account {
+                margin-top: 1.8%;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+				position: fixed;
+				margin-left: 93.6%;
+				
+            }
+			.account:hover {
+				border: white inset;
+			}
+			#login {
+				margin-left: 89.6%;
+			}
+		</style>
+		<a href="index.html">
+			<div class="icon"></div>
+		</a>
+		<p id="bannerText">About Plexi</p>
+		<div id="banner"> 
+			<button class = "account">Sign Up</button>
+			<button id="login" class = "account">Login</button>
+		</div>
+	</body>
+</html>

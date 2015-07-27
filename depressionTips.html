@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Depression Tips</title>
+		<script type='text/javascript' src = "jquery.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+	</head>
+	<body>
+		<style>
+			.icon {
+				background-image: url("bigIcon.png");
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border: rgb(142, 189, 189) 1px solid;
+				float: left;
+				position: fixed;
+				margin-top: -3px;
+				border-radius: 10px;
+				z-index: 3;			
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 8%;
+				width: 100%;
+				position: fixed;
+				z-index: 2;
+				margin-top: -20px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			#bannerText {
+				font-family: cuteFont;
+				font-size: 160%;
+				color: rgb(182, 229, 229);
+				z-index: 4;
+				position: fixed;
+				margin-left: 43%;
+				margin-top: .5%;
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			#logo {
+				background-color: rgb(182, 229, 229); 
+				margin-top: 100px;
+				background-size: 100% 100%;
+				font-size: 500%;
+				width: 80%;
+				height: 630px;
+				position: relative;
+				left: 10%;
+				float: center;
+				text-align: center;
+				border: rgb(142, 189, 189) solid 4px;
+				border-radius: 10px;
+			}
+			body {
+				background-image: url("pale_yellow_depressed_background.gif");
+			}
+			#pic {
+				border-radius: 5px;
+				height: 630px;
+				width: 80%;
+				z-index: -1;
+				float: center;
+				position: relative;
+				margin-top: 10%;
+				margin-left: 10%;
+			}
+			.arrow {
+				border-radius: 5px;
+				width: 5%;
+				height: 40px;
+				position: absolute;
+				margin-top: 22%;
+				z-index: 1;
+			}
+			#left {
+				margin-top: -22%;
+				background-image: url("leftArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 3%;
+			}
+			#right {
+				margin-top: -22%;
+				background-image: url("rightArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 91%;
+			}
+			.account {
+                margin-top: 1.8%;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+				position: fixed;
+				margin-left: 93.6%;
+				
+            }
+			.account:hover {
+				border: white inset;
+			}
+			#login {
+				margin-left: 89.6%;
+			}
+			li {
+				position: absolute;
+				font-family: cuteFont;
+				font-size: 130%;
+				color: rgb(142, 189, 189);
+				height: auto;
+				width: 80%;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
+				text-align: center;
+				float: center;
+				position: absolute;
+				margin-top: 58%;
+				left: 55%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+				list-style-type: disc;
+				display: block;
+			}
+			ul {
+				padding: 10% 10% 10% 10% 10%;
+			}
+			#subtitle {
+				font-family: cuteFont;
+				font-size: 300%;
+				color: rgb(142, 189, 189);
+				position: absolute;
+				height: auto;
+				width: auto;
+				top: 12%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+			}
+			.below {
+				text-align: left;
+				font-size: 90%;
+			}
+			#firstTip {
+				margin-top: -55%;
+				width: 30%;
+			}
+			#secondTip {
+				margin-top: 5%;
+				width: 30%;
+			}
+			#thirdTip {
+				margin-top: -55.5%;
+				margin-left: 50%;
+				width: 30%;
+			}
+			#fourthTip {
+				margin-left: 50%;
+				width: 30%;
+			}
+			#credit {
+				bottom: 0%;
+				right: 0%;
+				font-family: cuteFont;
+				font-size: 100%;
+				position: absolute;
+				color: rgb(142, 189, 189);
+			}
+			a:link {
+				color: rgb(142, 189, 189); 
+				background-color:transparent; 
+				text-decoration:none;
+			}
+			a:visited {
+				color: rgb(182, 229, 229); 
+				background-color:transparent; 
+				text-decoration:none;
+			}
+			a:hover {
+				color: rgb(182, 229, 229); 
+				background-color:transparent; 
+				text-decoration:underline;
+			}
+		</style>
+		<a href="index.html">
+			<div class="icon"></div>
+		</a>
+		<p id="bannerText">Depression Tips</p>
+		<div id="banner"> 
+			<button class = "account">Sign Up</button>
+			<button id="login" class = "account">Login</button>
+		</div>
+		<h2 id="subtitle">Dealing with depression</h2>
+		<li>
+			<ul id="firstTip"><strong>There is ALWAYS another solution, even if you can't see it right now.</strong>
+				<p class="below">Many people who have attempted suicide (and survived) say that they did it because they mistakenly felt there was no other solution to a problem they were experiencing. At the time, they could not see another way out, but in truth, they didn't really want to die. Remember that no matter how horribly you feel, these emotions will pass.</p>
+			</ul>
+			<ul id="secondTip"><strong>Having thoughts of hurting yourself or others does not make you a bad person.</strong>
+				<p class="below">Depression can make you think and feel things that are out of character. No one should judge you or condemn you for these feelings if you are brave enough to talk about them.</p>
+			</ul>
+			<ul id="thirdTip"><strong>If your feelings are uncontrollable, tell yourself to wait 24 hours before you take any action.</strong>
+				<p class="below">This can give you time to really think things through and give yourself some distance from the strong emotions that are plaguing you. During this 24-hour period, try to talk to someone--anyone--as long as they are not another suicidal or depressed person. Call a hotline or talk to a friend. What do you have to lose?</p>
+			</ul>
+			<ul id="fourthTip"><strong>If you're afraid you can't control yourself, make sure you are never alone.</strong>
+				<p class="below">Even if you can't verbalize your feelings, just stay in public places, hang out with friends or family members, or go to a movie--anything to keep from being by yourself and in danger.</p>
+			</ul>
+		</li>
+		<p id="credit">Tips from <a href="http://www.helpguide.org/articles/depression/teenagers-guide-to-depression.htm">HelpGuide.org</a></p>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anger Tips</title>
+		<script type='text/javascript' src = "jquery.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+	</head>
+	<body>
+		<style>
+			.icon {
+				background-image: url("bigIcon.png");
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border: rgb(142, 189, 189) 1px solid;
+				float: left;
+				position: fixed;
+				margin-top: -3px;
+				border-radius: 10px;
+				z-index: 3;			
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 8%;
+				width: 100%;
+				position: fixed;
+				z-index: 2;
+				margin-top: -20px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			#bannerText {
+				font-family: cuteFont;
+				font-size: 160%;
+				color: rgb(182, 229, 229);
+				z-index: 4;
+				position: fixed;
+				margin-left: 43%;
+				margin-top: .5%;
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			#logo {
+				background-color: rgb(182, 229, 229); 
+				margin-top: 100px;
+				background-size: 100% 100%;
+				font-size: 500%;
+				width: 80%;
+				height: 630px;
+				position: relative;
+				left: 10%;
+				float: center;
+				text-align: center;
+				border: rgb(142, 189, 189) solid 4px;
+				border-radius: 10px;
+			}
+			body {
+				background-image: url("light_blue_angry.jpg");
+			}
+			#pic {
+				border-radius: 5px;
+				height: 630px;
+				width: 80%;
+				z-index: -1;
+				float: center;
+				position: relative;
+				margin-top: 10%;
+				margin-left: 10%;
+			}
+			.arrow {
+				border-radius: 5px;
+				width: 5%;
+				height: 40px;
+				position: absolute;
+				margin-top: 22%;
+				z-index: 1;
+			}
+			#left {
+				margin-top: -22%;
+				background-image: url("leftArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 3%;
+			}
+			#right {
+				margin-top: -22%;
+				background-image: url("rightArrow.png");
+				background-size: 100% 100%;
+				float: center;
+				margin-left: 91%;
+			}
+			.account {
+                margin-top: 1.8%;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+				position: fixed;
+				margin-left: 93.6%;
+				
+            }
+			.account:hover {
+				border: white inset;
+			}
+			#login {
+				margin-left: 89.6%;
+			}
+			li {
+				position: absolute;
+				font-family: cuteFont;
+				font-size: 130%;
+				color: rgb(142, 189, 189);
+				height: auto;
+				width: 80%;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
+				text-align: center;
+				float: center;
+				position: absolute;
+				margin-top: 58%;
+				left: 55%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+				list-style-type: disc;
+				display: block;
+			}
+			ul {
+				padding: 10% 10% 10% 10% 10%;
+			}
+			#subtitle {
+				font-family: cuteFont;
+				font-size: 300%;
+				color: rgb(142, 189, 189);
+				position: absolute;
+				height: auto;
+				width: auto;
+				top: 12%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+			}
+			.below {
+				text-align: left;
+				font-size: 90%;
+			}
+			#firstTip {
+				margin-top: -55%;
+				width: 30%;
+			}
+			#secondTip {
+				margin-top: 2%;
+				width: 30%;
+			}
+			#thirdTip {
+				margin-top: -39.6%;
+				margin-left: 50%;
+				width: 30%;
+			}
+			#fourthTip {
+				margin-left: 50%;
+				width: 30%;
+			}
+			#credit {
+				bottom: 0%;
+				right: 0%;
+				font-family: cuteFont;
+				font-size: 100%;
+				position: absolute;
+				color: rgb(142, 189, 189);
+			}
+			a:link {
+				color: rgb(142, 189, 189); 
+				background-color:transparent; 
+				text-decoration:none;
+				text-shadow: -1px 0 rgb(142, 189, 189), 0 1px rgb(142, 189, 189), 1px 0 rgb(142, 189, 189), 0 -1px rgb(142, 189, 189);
+			}
+			a:visited {
+				color: rgb(182, 229, 229); 
+				background-color:transparent; 
+				text-decoration:none;
+				text-shadow: -1px 0 rgb(142, 189, 189), 0 1px rgb(142, 189, 189), 1px 0 rgb(142, 189, 189), 0 -1px rgb(142, 189, 189);
+			}
+			a:hover {
+				color: rgb(182, 229, 229); 
+				background-color:transparent; 
+				text-decoration:underline;
+				text-shadow: -1px 0 rgb(142, 189, 189), 0 1px rgb(142, 189, 189), 1px 0 rgb(142, 189, 189), 0 -1px rgb(142, 189, 189);
+			}
+		</style>
+		<a href="index.html">
+			<div class="icon"></div>
+		</a>
+		<p id="bannerText">Anger Tips</p>
+		<div id="banner"> 
+			<button class = "account">Sign Up</button>
+			<button id="login" class = "account">Login</button>
+		</div>
+		<h2 id="subtitle">Dealing with anger</h2>
+		<li>
+			<ul id="firstTip"><strong>Think before you speak.</strong>
+				<p class="below">In the heat of the moment, it's easy to say something you'll later regret. Take a few moments to collect your thoughts before saying anything - and allow others involved in the situation to do the same.</p>
+			</ul>
+			<ul id="secondTip"><strong>Once you're calm, express your anger.</strong>
+				<p class="below">As soon as you're thinking clearly, express your frustration in an assertive but nonconfrontational way. State your concerns and needs clearly and directly, without hurting others or trying to control them.</p>
+			</ul>
+			<ul id="thirdTip"><strong>Get some exercise.</strong>
+				<p class="below">Physical activity can help reduce stress that can cause you to become angry. If you feel your anger escalating, go for a brisk walk or run, or spend some time doing other enjoyable physical activities.</p>
+			</ul>
+			<ul id="fourthTip"><strong>Take a timeout.</strong>
+				<p class="below">Timeouts aren't just for kids. Give yourself short breaks during times of the day that tend to be stressful. A few moments of quiet time might help you feel better prepared to handle what's ahead without getting irritated or angry.</p>
+			</ul>
+		</li>
+		<p id="credit">Tips from <a href="http://www.helpguide.org/articles/depression/teenagers-guide-to-depression.htm">HelpGuide.org</a></p>
+	</body>
+</html>
