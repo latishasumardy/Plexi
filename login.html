@@ -145,7 +145,7 @@
 				  outline-offset: 0;
 			}
 			 
-			input[type=submit] {
+			input[type=button] {
 				  padding: 0 18px;
 				  height: 29px;
 				  font-size: 12px;
@@ -228,29 +228,36 @@
 			
 		</style>
         <script>
-		    var ref = new Firebase("https://demo.firebaseio-demo.com");
-            var authClient = new FirebaseAuthClient(ref, function(error, user) {
-                if (error) {
-                    alert(error);
-                    return;
-                }
-                if (user) {
-                     // User is already logged in.
-                    doLogin(user);
-                } else {
-                    // User is logged out.
-                    showLoginBox();
-                }
-                });
+            var ref = new Firebase("https://plexi.firebaseio.com");
+            var email = "asila.maksumova@gmail.com";
+            var pass = "@mishka99";
+            function loginUser(){
+                ref.authWithPassword({
+                    /*"email": "asila.maksumova@gmail.com",
+                    "password": "@mishka99"*/
+					"email": $("#user").val(),
+                    "password": $("#pass").val()
+                    }, function(error, authData) {
+                        if (error) {
+                            console.log("Login Failed!", error);
+							alert("Either your username or your password does not exist. Try again!");
+                        } else {
+                            console.log("Authenticated successfully with payload:", authData);
+							var url = "http://amaksumova.github.io/Plexi";    
+                            $(location).attr('href',url);
+                        }
+               });
+			}
+            	      
 		</script>	    
 	</head>
 	<body>
         <div class="container">
         <div class="login">
         <h1>Login</h1>
-        <form method="post" action="">
-            <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-            <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <form method="button" action="">
+            <p><input type="text" name="login" id="user" value="" placeholder="Username or Email"></p>
+            <p><input type="password" name="password" id="pass" value="" placeholder="Password"></p>
             <p class="remember_me">
                 <label>
                     <label>
@@ -259,7 +266,7 @@
                     </label>
                 </label>
             </p>
-            <p class="submit"><input type="submit" name="commit" value="Login"></p>
+            <p class="submit"><input type="button" name="commit" value="Login" onclick = loginUser()></p>
         </form>
         </div>
         <div class="login-help">

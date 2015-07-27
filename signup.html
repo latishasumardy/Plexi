@@ -218,29 +218,52 @@
 			
 		</style>
         <script>
-		    var ref = new Firebase("https://demo.firebaseio-demo.com");
-            function makeUser(userEmail, userPass){
-				alert("DO A THING");
-			    ref.createUser({
-					email: userEmail,
-					password: userPass
-				}, function(error, userData) {
-					if (error) {
-						switch (error.code) {
-							case "EMAIL_TAKEN":
-							console.log("The new user account cannot be created because the email is already in use.");
-							break;
-							case "INVALID_EMAIL":
-							console.log("The specified email is not a valid email.");
-							break;
-							default:
-							console.log("Error creating user:", error);
-						}
-					} else {
-						console.log("Successfully created user account with uid:", userData.uid);
-					}
+		    var ref = new Firebase("https://plexi.firebaseio.com");
+			
+			function registerUser(){
+				console.log("Called");
+				var textValue = $("#user").val();
+				var val = textValue;
+				console.log(val);
+                
+				ref.createUser({
+                    email: val,
+                    password: "jimbob"
+                }, function(error, userData) {
+                   if (error) {
+                       console.log("Error creating user:", error);
+                  } else {
+                       console.log("Successfully created user account with uid:", userData.uid);
+                  }
 				});
-        }
+			}
+			      
+		     ref.set({
+			       Asila: {
+     				   date_of_birth: "August 25, 1999",
+                       full_name: "Asila Maksumova",
+					   gender: "Female",
+					   time_zone: "PST",
+					   username: "asila"
+                   },
+				   
+				   Audrey: {
+				       date_of_birth: "November 3, 1998",
+                       full_name: "Audrey Thompson",
+					   gender: "Female",
+					   time_zone: "PST",
+					   username: "audrey"
+				   },
+				   
+				   Michelle: {
+				       date_of_birth: "May 27, 1998",
+                       full_name: "Michelle Shen",
+					   gender: "Female",
+					   time_zone: "PST",
+					   username: "michelle"
+				   }
+			   });
+
 
 		</script>	    
 	</head>
