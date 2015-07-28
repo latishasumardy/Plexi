@@ -15,6 +15,7 @@
 				position: fixed;
 				margin-top: -3px;
 				border-radius: 5px;
+				z-index: 3;
 			}
 			.icon:hover {
 				border: rgb(142, 189, 189) inset;
@@ -24,13 +25,13 @@
 				height: 7%;
 				width: 100%;
 				position: fixed;
-				z-index: -1;
+				z-index: 2;
 				margin-top: -9px;
 				margin-left: -12px;
 				border: rgb(142, 189, 189) solid;
 			}
 			body {
-				background-image: url("light_blue_angry.jpg");
+				background-image: url("balloon_sky.jpg");
 			}
 			@font-face {
 				font-family: cuteFont;      
@@ -53,7 +54,7 @@
 				font-family: cuteFont;
 				position: fixed;
 				margin-left: 93%;
-				
+				z-index: 3;
             }
 			.account:hover {
 				border: white inset;
@@ -67,8 +68,13 @@
 				color: rgb(182, 229, 229);
 				z-index: 4;
 				position: fixed;
-				margin-left: 43%;
-				margin-top: .5%;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
+				text-align: center;
+				float: center;
+				top: -2%;
+				left: 47%;
+				margin-right: -50%;
 			}
 			.balloon {
 				width : 15%;
@@ -89,11 +95,45 @@
 				position: fixed;
 				display: none;
 			}
-			.instructions {
-				font-size: 190%;
-				margin: .05em;
-				background-color: #79CDCD;
+			#instructions {
+				position: absolute;
+				z-index: 3;
+				font-family: cuteFont;
+				color: rgb(142, 189, 189);
+				font-size: 150%;
+				background-color: rgb(182, 229, 229);
+				border: rgb(142, 189, 189) solid;
+				border-radius: 5px;
+				width: 50%;
+				height: auto;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
 				text-align: center;
+				float: center;
+				top: 10%;
+				left: 50%;
+				margin-right: -50%;
+			}
+			#uploadedFace {
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: rgb(142, 189, 189) solid;
+				font-family: cuteFont;
+				padding: 5px 5px 5px 5px;
+				position: absolute;
+				z-index: 4;
+				width: auto;
+				height: auto;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
+				text-align: center;
+				float: center;
+				top: 8.8%;
+				left: 81.7%;
+				margin-right: -50%;			
+			}
+			.upload {
+				margin-top: 2%;
 			}
 		</style>
 		<script>
@@ -191,13 +231,21 @@
 		<a href="index.html">
 			<div class="icon"></div>
 		</a>
-		<p id="bannerText">Games & Exercises</p>
+		<p id="bannerText">Balloon Popping Game</p>
 		<div id="banner"> 
 		</div>
 		<button class = "account">Sign Up</button>
 		<button id="login" class = "account">Login</button>
 		<canvas id="mycanvas">
 		</canvas>
+		
+		<h2 id= "instructions"> 
+			Enter a link of a picture of someone or something that makes you angry,
+			then have fun popping his/her/its face off! 
+		</h2>
+
+		<input type = "text" id = "uploadedFace" name = "face"/>
+		<button class="upload" id="uploadedFace" onclick="changePic()">Upload</button>
 		
 		<img class = "balloon blueObject" id = "blueBalloon" src = "blueballoonCleaned.png" />
 		<img class = "balloon orangeObject" id = "orangeBalloon" src = "orangeballoonCleaned.png" />
@@ -207,11 +255,6 @@
 		<img class = "balloon yellowObject" id = "yellowBalloon" src = "yellowballoonCleaned.png" />
 		<img class = "balloon redObject" id = "redBalloon" src = "redballoonCleaned.png" />
 		<img class = "balloon mintObject" id = "mintBalloon" src = "mintballoonCleaned.png" />
-		
-		<p class = "instructions""> Upload of an image of someone that makes you ANGRYYYYYY </p>
-		<p class = "instructions"> Then have fun popping their faces off! </p>
-		<p><input type = "file" id = "uploadedFace" name = "face" /></img></p>
-		<p><button onclick="changePic()">Upload</button></p>
 		
 		<img class = "face blueObject" src = "iconCleaned.png" />
 		<img class = "face orangeObject"src = "iconCleaned.png" />
