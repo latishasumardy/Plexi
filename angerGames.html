@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anger Games & Exercises</title>
+		<script src="jquery.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+		<style>
+			.icon {
+				background-image: url("borderlessIcon.png");
+				background-size: 100% 100%;
+				width: 48px;
+				height: 48px;
+				border: rgb(142, 189, 189) outset;
+				float: left;
+				position: fixed;
+				margin-top: -3px;
+				border-radius: 5px;
+			}
+			.icon:hover {
+				border: rgb(142, 189, 189) inset;
+			}
+			#banner {
+				background-color: rgb(142, 189, 189);
+				height: 7%;
+				width: 100%;
+				position: fixed;
+				z-index: -1;
+				margin-top: -9px;
+				margin-left: -12px;
+				border: rgb(142, 189, 189) solid;
+			}
+			body {
+				background-image: url("light_blue_angry.jpg");
+			}
+			@font-face {
+				font-family: cuteFont;      
+				src: url('HappyMonkey-Regular.ttf');
+			}
+			p {
+				margin: 50px 50px;
+				text-align: center;
+				text-decoration: none;
+			}
+			a {
+				text-decoration: none;
+			}
+			.account {
+                margin-top: .6%;
+				padding: 5px 5px 5px 5px;
+				border-radius: 5px;
+				background-color: rgb(182, 229, 229);
+				border: white outset;
+				font-family: cuteFont;
+				position: fixed;
+				margin-left: 93%;
+				
+            }
+			.account:hover {
+				border: white inset;
+			}
+			#login {
+				margin-left: 89%;
+			}
+			#bannerText {
+				font-family: cuteFont;
+				font-size: 160%;
+				color: rgb(182, 229, 229);
+				z-index: 4;
+				position: fixed;
+				margin-left: 43%;
+				margin-top: .5%;
+			}
+			.balloon {
+				width : 15%;
+				position: fixed;
+			}
+			.face {
+				display: none;
+				width : 10%;
+				position: relative;
+				margin-left: 40px;
+				margin-top: 30px;
+				border-radius: 30px;
+				-webkit-border-radius: 150px;
+				-moz-border-radius: 150px;
+			}
+			.popped {
+				width: 15%;
+				position: fixed;
+				display: none;
+			}
+			.instructions {
+				font-size: 190%;
+				margin: .05em;
+				background-color: #79CDCD;
+				text-align: center;
+			}
+		</style>
+		<script>
+			var uploaded = false;
+			$(document).ready(function() {
+				//$(".popped").hide();
+				click("blueObject");
+				click("magentaObject");
+				click("purpleObject");
+				click("brightgreenObject");
+				click("orangeObject");
+				click("yellowObject");
+				click("redObject");
+				click("mintObject");
+				
+				balloon("blueObject");
+				
+				$(".magentaObject").delay(1000);
+				balloon("magentaObject");
+				
+				$(".purpleObject").delay(1000);
+				balloon("purpleObject");
+				
+				balloon("brightgreenObject");
+				
+				$("#orangeObject").delay(1000);
+				balloon("orangeObject");
+				
+				balloon("yellowObject");
+				
+				balloon("redObject");
+				
+				balloon("mintObject");
+				
+				
+			});
+			var width = $(window).width();
+			var height = $(window).height();
+			
+			var color = classValue.split("Object")[0];
+			
+			function balloon(classValue) {
+				var color = classValue.split("Object")[0];
+				var x = Math.floor(Math.random() * (width-130) + 10);
+				$("." + classValue).css({position: 'fixed', left: x + 'px', top: height});
+				$("." + classValue).delay(1000);
+				var other = height + 320;
+				if (uploaded) {
+					$("." + classValue).show();
+				}
+				else {
+					$("#" + color + "Balloon").show();
+				}
+				$("." + classValue).animate({top: '-=' + other + 'px'}, 3600, function() {
+					balloon(classValue);
+				});
+			}
+			
+			function click(classValue) {
+				var color = classValue.split("Object")[0];
+				$("#" + color + "BalloonPopped").hide();
+				$("." + classValue).mousedown(function() {
+					$('body').append('<embed src="pop.mp3" autostart="true" hidden="true" loop="false">');
+					$("." + classValue).stop();
+					
+					var p = $("." + classValue);
+					var position = p.position();
+					
+					$("#" + color + "BalloonPopped").css({position: 'fixed', left: position.left + 'px', top: position.top + 'px'});
+					$("#" + color + "BalloonPopped").show();
+					
+					$("." + classValue).hide();
+					
+					$("#" + color + "BalloonPopped").hide(1000);
+					
+					balloon(classValue);
+				});
+			}
+			
+			
+			function changePic(){
+				var source = document.getElementById("uploadedFace").value;
+				//var splitSource = source.split("\\");
+				//var imageSource = splitSource[splitSource.length - 1];
+				//$(".face").attr("src", imageSource);
+				$(".face").attr("src", source);
+				$(".face").css("display", "inline");
+				uploaded = true;
+			}
+		</script>
+
+	</head>
+
+	<body>  
+		<a href="index.html">
+			<div class="icon"></div>
+		</a>
+		<p id="bannerText">Games & Exercises</p>
+		<div id="banner"> 
+		</div>
+		<button class = "account">Sign Up</button>
+		<button id="login" class = "account">Login</button>
+		<canvas id="mycanvas">
+		</canvas>
+		
+		<img class = "balloon blueObject" id = "blueBalloon" src = "blueballoonCleaned.png" />
+		<img class = "balloon orangeObject" id = "orangeBalloon" src = "orangeballoonCleaned.png" />
+		<img class = "balloon magentaObject" id = "magentaBalloon" src = "magentaballoonCleaned.png" />
+		<img class = "balloon purpleObject" id = "purpleBalloon" src = "purpleballoonCleaned.png" />
+		<img class = "balloon brightgreenObject" id = "brightgreenBalloon" src = "brightgreenballoonCleaned.png" />
+		<img class = "balloon yellowObject" id = "yellowBalloon" src = "yellowballoonCleaned.png" />
+		<img class = "balloon redObject" id = "redBalloon" src = "redballoonCleaned.png" />
+		<img class = "balloon mintObject" id = "mintBalloon" src = "mintballoonCleaned.png" />
+		
+		<p class = "instructions""> Upload of an image of someone that makes you ANGRYYYYYY </p>
+		<p class = "instructions"> Then have fun popping their faces off! </p>
+		<p><input type = "file" id = "uploadedFace" name = "face" /></img></p>
+		<p><button onclick="changePic()">Upload</button></p>
+		
+		<img class = "face blueObject" src = "iconCleaned.png" />
+		<img class = "face orangeObject"src = "iconCleaned.png" />
+		<img class = "face magentaObject" src = "iconCleaned.png" />
+		<img class = "face purpleObject" src = "iconCleaned.png" />
+		<img class = "face brightgreenObject" src = "iconCleaned.png" />
+		<img class = "face yellowObject" src = "iconCleaned.png" />
+		<img class = "face redObject" src = "iconCleaned.png" />
+		<img class = "face mintObject" src = "iconCleaned.png" />
+		
+		<img class = "balloon" id = "blueBalloonPopped" src = "blueBalloonPopped.png" />
+		<img class = "balloon" id = "orangeBalloonPopped" src = "orangeBalloonPopped.png" />
+		<img class = "balloon" id = "magentaBalloonPopped" src = "magentaBalloonPopped.png" />
+		<img class = "balloon" id = "purpleBalloonPopped" src = "purpleBalloonPopped.png" />
+		<img class = "balloon" id = "brightgreenBalloonPopped" src = "brightgreenBalloonPopped.png" />
+		<img class = "balloon" id = "yellowBalloonPopped" src = "yellowBalloonPopped.png" />
+		<img class = "balloon" id = "redBalloonPopped" src = "redBalloonPopped.png" />
+		<img class = "balloon" id = "mintBalloonPopped" src = "mintBalloonPopped.png" />
+	</body>
+
+</html>

@@ -8,16 +8,19 @@
 	<body>
 		<style>
 			.icon {
-				background-image: url("bigIcon.png");
+				background-image: url("borderlessIcon.png");
 				background-size: 100% 100%;
-				width: 50px;
-				height: 50px;
-				border: rgb(142, 189, 189) 1px solid;
+				width: 48px;
+				height: 48px;
+				border: rgb(142, 189, 189) outset;
 				float: left;
 				position: fixed;
 				margin-top: -3px;
-				border-radius: 10px;
-				z-index: 3;			
+				border-radius: 5px;
+				z-index: 10;
+			}
+			.icon:hover {
+				border: rgb(142, 189, 189) inset;
 			}
 			#banner {
 				background-color: rgb(142, 189, 189);
@@ -25,7 +28,7 @@
 				width: 100%;
 				position: fixed;
 				z-index: 2;
-				margin-top: -20px;
+				margin-top: -18px;
 				margin-left: -12px;
 				border: rgb(142, 189, 189) solid;
 			}

@@ -10,6 +10,7 @@
 				height: 40px;
 				border: rgb(142, 189, 189) 1px solid;
 				float: left;
+				margin-top: 3px;
 				position: fixed;
 				border-radius: 5px;
 				border: white outset;
@@ -27,56 +28,80 @@
 				width: 100%;
 				position: fixed;
 				z-index: -1;
-				margin-top: -22px;
+				margin-top: -18px;
 				margin-left: -12px;
 				border: rgb(142, 189, 189) solid;
 			}
 			#subtitle {
 				font-family: cuteFont;
 				position: absolute;
-				left: 40%;
-				margin-top: 17.4%;
-				float: center;
-				height: 10%;
-				width: 20%;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
 				text-align: center;
-				font-size: 200%;
+				float: center;
+				top: 36%;
+				left: 50%;
+				margin-right: -50%;
+				height: 10%;
+				width: 30%;
+				font-size: 290%;
+				color: rgb(142, 189, 189);
 			}
             .emotion {
                 background-color: rgb(255, 255, 230);
                 border-radius: 7px;
 				border: gray solid;
-				position: relative;
-                width: 20%;
-                height: 200px;
+				position: absolute;
+                width: 18%;
+                height: 180px;
                 font-family: cuteFont;
                 font-size: auto;
-				margin: 2% 2% 2% 2%;
-            }
-			.emotionText {
+				margin-top: 22%;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
 				text-align: center;
-				margin-top: 23%;
-				font-size: 340%;
-				color: white;
-				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				float: center;
+				top: 20%;
+				left: 50%;
+				margin-right: -50%;
+            }
+			.emotion:hover {
+				width: 20%;
+				height: 200px;
+			}
+			.emotionText {
+				margin-top: 80%;
+				font-size: 300%;
+				color: rgb(142, 189, 189);
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
+				text-align: center;
+				float: center;
+				top: 13%;
+				left: 50%;
+				margin-right: -50%;
+				margin-left: 50%;
 			}
             @font-face {
                 font-family: cuteFont;
                 src: url('HappyMonkey-Regular.ttf');
-            }
-			
+            }			
 			#logo {
 				background-image: url("plexi_bannerCut.png"); 	
 				background-size: 100% 100%;
 				background-color: rgb(182, 229, 229);
 				margin-top: -10px;
 				font-size: 500%;
-				width: 40%;
-				height: 230px;
+				width: 35%;
+				height: 200px;
 				position: fixed;
-				left: 30%;
-				float: center;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
 				text-align: center;
+				float: center;
+				top: 13%;
+				left: 50%;
+				margin-right: -50%;
 				border: rgb(142, 189, 189) solid 4px;
 				border-radius: 10px;
 			}
@@ -85,38 +110,32 @@
 				background-color: rgb(98, 5, 93);
 				background-image: url("anxiety.png"); 
 				background-size: 100% 100%;
-				margin-left: 25%;
-				margin-top: 22%;
-                float: left;
 				border: rgb(198, 105, 193) solid;
+				margin-left: -30%;
             }
             
             #depressed {
 				background-image: url("depression.png"); 
 				background-size: 100% 100%;
-				border: rgb(81, 107, 193) solid;
-				margin-right: 25%;
-				margin-top: 22%;
-                float: right;
+				border: rgb(81, 107, 193) solid;;;
 				font-size: 90%;
+				margin-left: -10%;
             }
             
             #insecure {
 				background-image: url("no confidence.png"); 
 				background-size: 100% 100%;
 				border: rgb(37, 172, 90) solid;
-				margin-left: 25%;
-                float: left;
+				margin-left: 10%;
             }
             
             #angry {
 				background-color: rgb(251, 0, 0);
 				background-image: url("anger.png"); 	
 				background-size: 100% 100%;
-                float: right;
-				margin-right: 25%;
 				border: rgb(255, 120, 120) solid;
-            }           
+				margin-left: 30%;
+            }   
 			.account {
                 margin-top: .6%;
 				padding: 5px 5px 5px 5px;
@@ -147,7 +166,7 @@
 		<a href="about.html">
 			<div class="icon">About Plexi</div>
 		</a>
-        <div id="subtitle">Help! I'm feeling...</div>
+        <div id="subtitle"><strong>Help! I'm feeling...</strong></div>
 		
 		<a href="anxious.html">
 			<div class = "emotion" id = "anxious">

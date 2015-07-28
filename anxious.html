@@ -6,15 +6,18 @@
 		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
 		<style>
 			.icon {
-				background-image: url("bigIcon.png");
+				background-image: url("borderlessIcon.png");
 				background-size: 100% 100%;
-				width: 50px;
-				height: 50px;
-				border: rgb(142, 189, 189) 1px solid;
+				width: 48px;
+				height: 48px;
+				border: rgb(142, 189, 189) outset;
 				float: left;
 				position: fixed;
 				margin-top: -3px;
-				border-radius: 10px;
+				border-radius: 5px;
+			}
+			.icon:hover {
+				border: rgb(142, 189, 189) inset;
 			}
 			#banner {
 				background-color: rgb(142, 189, 189);
@@ -22,7 +25,7 @@
 				width: 100%;
 				position: fixed;
 				z-index: -1;
-				margin-top: -22px;
+				margin-top: -18px;
 				margin-left: -12px;
 				border: rgb(142, 189, 189) solid;
 			}
@@ -36,7 +39,7 @@
 			.options {
 				text-decoration: none;
 				text-align: center;
-				border: rgb(142, 189, 189) solid;
+				border: rgb(142, 189, 189) solid 2px;
 				border-radius: 7px;
 				font-family: cuteFont;
 				padding: 0.5%;
@@ -46,6 +49,9 @@
 				width: 15%;
 				height: 150px;
 				margin-top: 26%;
+			}
+			.options:hover {
+				border: rgb(142, 189, 189) solid 5px;
 			}
 			.optionsText {
 				margin-top: 20%;
@@ -99,24 +105,36 @@
 				background-color: rgb(182, 229, 229);
 				margin-top: -10px;
 				font-size: 500%;
-				width: 40%;
-				height: 230px;
+				width: 35%;
+				height: 200px;
 				position: fixed;
-				left: 30%;
-				float: center;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
 				text-align: center;
+				float: center;
+				top: 13%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
 				border: rgb(142, 189, 189) solid 4px;
 				border-radius: 10px;
 			}
 			#logoText {
 				position: fixed;
 				font-family: cuteFont;
-				margin-top: 3.5%;
+				margin-top: 12.5%;
+				transform: translate(-50%, -50%);
+				horizontal-align: middle;
+				text-align: center;
 				float: center;
-				margin-left: 1.2%;
+				top: 13%;
+				left: 48%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+				margin-left: 3%;
 				color: rgb(38, 126, 181);
 				text-shadow: -1px 0 rgb(142, 189, 189), 0 1px rgb(142, 189, 189), 1px 0 rgb(142, 189, 189), 0 -1px rgb(142, 189, 189);
-				font-size: 110%;
+				font-size: 90%;
 			}
 			.account {
                 margin-top: .6%;
