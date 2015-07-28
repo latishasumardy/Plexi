@@ -3,10 +3,10 @@
 	<head>
 		<title>Anger Games & Exercises</title>
 		<script src="jquery.js"></script>
-		<link rel="shortcut icon" type="image/x-icon" href="bigIcon.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="Pics/bigIcon.png" />
 		<style>
 			.icon {
-				background-image: url("borderlessIcon.png");
+				background-image: url("Pics/borderlessIcon.png");
 				background-size: 100% 100%;
 				width: 48px;
 				height: 48px;
@@ -31,7 +31,7 @@
 				border: rgb(142, 189, 189) solid;
 			}
 			body {
-				background-image: url("balloon_sky.jpg");
+				background-image: url("Pics/balloon_sky.jpg");
 			}
 			@font-face {
 				font-family: cuteFont;      
@@ -194,20 +194,20 @@
 			
 			function click(classValue) {
 				var color = classValue.split("Object")[0];
-				$("#" + color + "BalloonPopped").hide();
+				$("#" + color + "balloonPopped").hide();
 				$("." + classValue).mousedown(function() {
-					$('body').append('<embed src="pop.mp3" autostart="true" hidden="true" loop="false">');
+					$('body').append('<embed src="Music/pop.mp3" autostart="true" hidden="true" loop="false">');
 					$("." + classValue).stop();
 					
 					var p = $("." + classValue);
 					var position = p.position();
 					
-					$("#" + color + "BalloonPopped").css({position: 'fixed', left: position.left + 'px', top: position.top + 'px'});
-					$("#" + color + "BalloonPopped").show();
+					$("#" + color + "balloonPopped").css({position: 'fixed', left: position.left + 'px', top: position.top + 'px'});
+					$("#" + color + "balloonPopped").show();
 					
 					$("." + classValue).hide();
 					
-					$("#" + color + "BalloonPopped").hide(1000);
+					$("#" + color + "balloonPopped").hide(1000);
 					
 					balloon(classValue);
 				});
@@ -247,32 +247,32 @@
 		<input type = "text" id = "uploadedFace" name = "face"/>
 		<button class="upload" id="uploadedFace" onclick="changePic()">Upload</button>
 		
-		<img class = "balloon blueObject" id = "blueBalloon" src = "blueballoonCleaned.png" />
-		<img class = "balloon orangeObject" id = "orangeBalloon" src = "orangeballoonCleaned.png" />
-		<img class = "balloon magentaObject" id = "magentaBalloon" src = "magentaballoonCleaned.png" />
-		<img class = "balloon purpleObject" id = "purpleBalloon" src = "purpleballoonCleaned.png" />
-		<img class = "balloon brightgreenObject" id = "brightgreenBalloon" src = "brightgreenballoonCleaned.png" />
-		<img class = "balloon yellowObject" id = "yellowBalloon" src = "yellowballoonCleaned.png" />
-		<img class = "balloon redObject" id = "redBalloon" src = "redballoonCleaned.png" />
-		<img class = "balloon mintObject" id = "mintBalloon" src = "mintballoonCleaned.png" />
+		<img class = "balloon blueObject" id = "blueBalloon" src = "Pics/blueballoonCleaned.png" />
+		<img class = "balloon orangeObject" id = "orangeBalloon" src = "Pics/orangeballoonCleaned.png" />
+		<img class = "balloon magentaObject" id = "magentaBalloon" src = "Pics/magentaballoonCleaned.png" />
+		<img class = "balloon purpleObject" id = "purpleBalloon" src = "Pics/purpleballoonCleaned.png" />
+		<img class = "balloon brightgreenObject" id = "brightgreenBalloon" src = "Pics/brightgreenballoonCleaned.png" />
+		<img class = "balloon yellowObject" id = "yellowBalloon" src = "Pics/yellowballoonCleaned.png" />
+		<img class = "balloon redObject" id = "redBalloon" src = "Pics/redballoonCleaned.png" />
+		<img class = "balloon mintObject" id = "mintBalloon" src = "Pics/mintballoonCleaned.png" />
 		
-		<img class = "face blueObject" src = "iconCleaned.png" />
-		<img class = "face orangeObject"src = "iconCleaned.png" />
-		<img class = "face magentaObject" src = "iconCleaned.png" />
-		<img class = "face purpleObject" src = "iconCleaned.png" />
-		<img class = "face brightgreenObject" src = "iconCleaned.png" />
-		<img class = "face yellowObject" src = "iconCleaned.png" />
-		<img class = "face redObject" src = "iconCleaned.png" />
-		<img class = "face mintObject" src = "iconCleaned.png" />
+		<img class = "face blueObject" src = "Pics/bigIcon.png" />
+		<img class = "face orangeObject"src = "Pics/bigIcon.png" />
+		<img class = "face magentaObject" src = "Pics/bigIcon.png" />
+		<img class = "face purpleObject" src = "Pics/bigIcon.png" />
+		<img class = "face brightgreenObject" src = "Pics/bigIcon.png" />
+		<img class = "face yellowObject" src = "Pics/bigIcon.png" />
+		<img class = "face redObject" src = "Pics/bigIcon.png" />
+		<img class = "face mintObject" src = "Pics/bigIcon.png" />
 		
-		<img class = "balloon" id = "blueballoonPopped" src = "blueballoonPopped.png" />
-		<img class = "balloon" id = "orangeballoonPopped" src = "orangeballoonPopped.png" />
-		<img class = "balloon" id = "magentaballoonPopped" src = "magentaballoonPopped.png" />
-		<img class = "balloon" id = "purpleballoonPopped" src = "purpleballoonPopped.png" />
-		<img class = "balloon" id = "brightgreenballoonPopped" src = "brightgreenballoonPopped.png" />
-		<img class = "balloon" id = "yellowballoonPopped" src = "yellowballoonPopped.png" />
-		<img class = "balloon" id = "redballoonPopped" src = "redballoonPopped.png" />
-		<img class = "balloon" id = "mintballoonPopped" src = "mintballoonPopped.png" />
+		<img class = "balloon" id = "blueballoonPopped" src = "Pics/blueballoonPopped.png" />
+		<img class = "balloon" id = "orangeballoonPopped" src = "Pics/orangeballoonPopped.png" />
+		<img class = "balloon" id = "magentaballoonPopped" src = "Pics/magentaballoonPopped.png" />
+		<img class = "balloon" id = "purpleballoonPopped" src = "Pics/purpleballoonPopped.png" />
+		<img class = "balloon" id = "brightgreenballoonPopped" src = "Pics/brightgreenballoonPopped.png" />
+		<img class = "balloon" id = "yellowballoonPopped" src = "Pics/yellowballoonPopped.png" />
+		<img class = "balloon" id = "redballoonPopped" src = "Pics/redballoonPopped.png" />
+		<img class = "balloon" id = "mintballoonPopped" src = "Pics/mintballoonPopped.png" />
 	</body>
 
 </html>
